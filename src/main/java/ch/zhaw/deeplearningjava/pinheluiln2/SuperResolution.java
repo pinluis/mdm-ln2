@@ -34,18 +34,25 @@ public final class SuperResolution {
 
     private SuperResolution() {}
 
-    public static void main(String[] args) throws ModelException, TranslateException, IOException {
-        String imagePath = "src/main/resources/";
-        ImageFactory imageFactory = ImageFactory.getInstance();
+    // public static void main(String[] args) throws ModelException, TranslateException, IOException {
+    //     String imagePath = "src/main/resources/";
+    //     ImageFactory imageFactory = ImageFactory.getInstance();
 
-        List<Image> inputImages =
-                Collections.singletonList(imageFactory.fromFile(Paths.get(imagePath + "fox.png")));
+    //     List<Image> inputImages =
+    //             Collections.singletonList(imageFactory.fromFile(Paths.get(imagePath + "WIN_20230502_14_18_09_Pro.png")));
 
+    //     List<Image> enhancedImages = enhance(inputImages);
+
+    //     logger.info("Using TensorFlow Engine. {} images generated.", enhancedImages.size());
+    //     saveImages(inputImages, enhancedImages);
+    // }
+
+    public static Image enhanceSingle(Image inputImage) throws IOException, ModelException, TranslateException {
+        List<Image> inputImages = Collections.singletonList(inputImage);
         List<Image> enhancedImages = enhance(inputImages);
-
-        logger.info("Using TensorFlow Engine. {} images generated.", enhancedImages.size());
-        saveImages(inputImages, enhancedImages);
+        return enhancedImages.get(0);
     }
+    
 
     private static void saveImages(List<Image> input, List<Image> generated) throws IOException {
         Path outputPath = Paths.get("build/output/super-res/");
