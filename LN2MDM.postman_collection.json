@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "2ff118b7-d1fa-4aa0-bc88-24186ab2e5a3",
+		"name": "LN2MDM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/enhance",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/luisp/OneDrive/Bilder/Eigene Aufnahmen/WIN_20230502_14_18_09_Pro.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/enhance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"enhance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
