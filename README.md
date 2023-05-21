@@ -27,13 +27,13 @@ cd pinhelui-ln2
 3. Build the Docker image:
 
 ```bash
-docker build -t pinhelui-ln2 .
+docker build -t pinluis/super-resolution:0.0.1 -f Dockerfile .
 ```
 
 4. Run the Docker image:
 
 ```bash
-docker run -p 8080:8080 pinhelui-ln2
+docker run -p 8080:8080 pinluis/super-resolution:0.0.1
 ```
 
 5. Open your browser and go to http://localhost:8080
