@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Super Resolution</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Super Resolution</h1>
+    <p>Upload a PNG image to enhance its resolution.</p>
+    <input type="file" id="fileInput" accept=".png" />
+    <button id="submitButton">Submit</button>
+    <div class="image-container">
+      <div>
+        <h2>Original Image</h2>
+        <img id="originalImage" style="display: none" />
+      </div>
+      <div>
+        <h2>Enhanced Image</h2>
+        <div id="loadingSpinner" class="loader" style="display: none"></div>
+        <img id="resultImage" style="display: none" />
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
