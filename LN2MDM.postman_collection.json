@@ -16,7 +16,7 @@
             {
               "key": "file",
               "type": "file",
-              "src": "src/main/resources/fox.png"
+              "src": ""
             }
           ]
         },
