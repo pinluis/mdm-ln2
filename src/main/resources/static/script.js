@@ -20,7 +20,6 @@ document.getElementById("submitButton").addEventListener("click", function () {
   loadingSpinner.style.display = "block";
 
   fetch("/enhance", {
-    // Replace with your host name and port
     method: "POST",
     body: formData,
   })
